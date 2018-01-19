@@ -105,7 +105,7 @@ def profile_exists(account_name):
     Function that check if a profile exists using an account name to return a
     boolean if it is found or not.
     """
-    return Passwords.profile_exists()
+    return Passwords.profile_exists(account_name)
 
 
 def display_profiles():
@@ -213,7 +213,7 @@ def main():
                 print("")
                 for profile in display_profiles():
                     print(
-                        f"- {profile.account_name} {profile.account_password} {profile.password_length}")
+                        f"Account- {profile.account_name}, Password- {profile.account_password}, Password Length- {profile.password_length}")
                     print("")
             else:
                 print("")
@@ -221,7 +221,7 @@ def main():
                 print("")
 
         elif short_code == "fp":
-            print("Enter the number you want to search for")
+            print("Enter the account you want to the password for")
 
             account_name = input()
             if profile_exists(account_name):
@@ -230,7 +230,7 @@ def main():
                 print(f"{search_profile.account_name}")
                 print("_" * 20)
                 print(f"Password - {search_profile.account_password}")
-                print(f"Password - {search_profile.password_length}")
+                print(f"Password Length - {search_profile.password_length}")
                 print("")
             else:
                 print("That profile does not exist")
