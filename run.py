@@ -16,3 +16,10 @@ def save_profile(profile):
     Function to save profile
     """
     profile.save_profile()
+
+
+def find_profile(account_name):
+    """
+    Function finds password by account name and returns full details
+    """
+    return Passwords.find_by_account(account_name)
