@@ -68,6 +68,16 @@ class Passwords:
         return cls.password_list
 
     @classmethod
+    def find_by_account(cls, account_name):
+        """
+        This method takes in an account name and returns the password matching
+        the account.
+        """
+        for profile in cls.password_list:
+            if profile.account_name == account_name:
+                return profile
+
+    @classmethod
     def copy_password(cls, account_name):
         password_found = Passwords.find_by_account(account_name)
         pyperclip.copy(password_found.account_password)
