@@ -2,13 +2,14 @@
 # print("Jedi")
 from locker import Passwords
 from user import User
+import random
 
 """
 Users Details
 """
 
 
-def create_user(fname, lname, phone, email):
+def create_user(fname, lname, phone, email, passwords):
     """
     Function to create a new user_list
     """
@@ -137,10 +138,44 @@ def main():
               fp - find a password profile,
               ex - exit contact list.""")
         short_code = input().lower()
-        print("_" * 20)
+        print("_" * 100)
         if short_code == "nc":
             print("New Contact")
-            print("_" * 100)
+            print("_" * 20)
+
+            print("New Contact")
+            print("_" * 20)
+
+            print("Enter first name -")
+            f_name = input()
+
+            print("Enter last name -")
+            l_name = input()
+
+            print("Phone number -")
+            p_number = input()
+
+            print("Email address -")
+            email = input()
+
+            print("""Use:
+                  g- to generate a password
+                  m- to set your own
+                  """)
+            pass_code = input().lower()
+            print("__" * 20)
+            if pass_code == "g":
+                password_length = int(
+                    input("How long do you want your password"))
+                string = "abcdefghigjkmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ-_=+{}\|"';>./,`!@#$^&*()`'
+                password = "".join(random.sample(string, password_length))
+                print(password)
+
+            save_users(create_user(f_name, l_name, p_number, email, password))
+
+            print("")
+            print(f"""New contact - {f_name} {l_name} """)
+            print("")
         elif short_code == "ex":
             print("")
             print(
