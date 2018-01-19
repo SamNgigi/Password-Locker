@@ -9,7 +9,7 @@ class User:
     """
     user_list = []
 
-    def __init__(self, first_name, last_name, phone_number, email, password):
+    def __init__(self, first_name, last_name, password):
         """
         __init__ method that helps us define for our objects.
 
@@ -17,23 +17,20 @@ class User:
           Args:
               first_name: New user first name.
               last_name: New user last name.
-              number: New user phone number.
-              email: New user  email address.
+              password: New user  password address.
 
         The "self" python keyword can be likened to "this" in java & javascript
         """
 
         self.first_name = first_name
         self.last_name = last_name
-        self.phone_number = phone_number
-        self.email = email
         self.password = password
 
     def save_user(self):
         """
         save_user method saves user objects into user_list
         """
-
+#
         User.user_list.append(self)
 
     def delete_user(self):
@@ -60,7 +57,7 @@ class User:
     def display_users(cls):
         return cls.user_list
 
-    @classmethod
-    def copy_email(cls, number):
-        user_found = User.find_by_number(number)
-        pyperclip.copy(user_found.email)
+    # @classmethod
+    # def copy_password(cls, number):
+    #     user_found = User.find_by_number(number)
+    #     pyperclip.copy(user_found.password)

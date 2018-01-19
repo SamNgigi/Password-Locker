@@ -170,7 +170,7 @@ def main():
 
             print("")
             print(
-                f"""New profile - {f_name} {l_name} your account password is - {password}""")
+                f"""New account created for - {f_name} {l_name} your account password is - {password}""")
             print("")
         elif short_code == "np":
             print(
@@ -191,17 +191,21 @@ def main():
                 string = "abcdefghigjkmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ-_=+\|"';>./,`!@#$^&*()`'
 
                 password = "".join(random.sample(string, password_length))
-
+                print("")
                 print(f"Your password for {account_name} is: {password}")
                 print("")
                 print("__" * 20)
             else:
                 print("Write a password of your own. We'll store it for you")
                 password = input()
+                password_length = len(password)
                 print("")
                 print(f"Your password for {account_name} is: {password}")
                 print("")
                 print("__" * 20)
+
+            save_profile(create_profile(
+                account_name, password, password_length))
 
         elif short_code == "dp":
             if display_profiles():
@@ -209,11 +213,11 @@ def main():
                 print("")
                 for profile in display_profiles():
                     print(
-                        f"{profile.account_name} {profile.account_password} {profile.password_length}")
+                        f"- {profile.account_name} {profile.account_password} {profile.password_length}")
                     print("")
             else:
                 print("")
-                print("You dont seem to have any profiles save yet")
+                print("You dont seem to have any profiles saved yet")
                 print("")
 
         elif short_code == "fp":
