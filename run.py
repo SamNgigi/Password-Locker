@@ -139,10 +139,7 @@ def main():
               ex - exit contact list.""")
         short_code = input().lower()
         print("_" * 100)
-        if short_code == "nc":
-            print("New Contact")
-            print("_" * 20)
-
+        if short_code == "cn":
             print("New Contact")
             print("_" * 20)
 
@@ -158,9 +155,10 @@ def main():
             print("Email address -")
             email = input()
 
-            print("""Use:
+            print("""
+                  We can generate a password for you. Use:
                   g- to generate a password
-                  m- to set your own
+                  m- to set your own.
                   """)
             pass_code = input().lower()
             print("__" * 20)
@@ -169,12 +167,15 @@ def main():
                     input("How long do you want your password"))
                 string = "abcdefghigjkmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ-_=+{}\|"';>./,`!@#$^&*()`'
                 password = "".join(random.sample(string, password_length))
-                print(password)
+                print(f"Your new password is {password}")
+            else:
+                print("Write a password of your own. We'll store it for you")
+                password = input()
 
             save_users(create_user(f_name, l_name, p_number, email, password))
 
             print("")
-            print(f"""New contact - {f_name} {l_name} """)
+            print(f"""New contact - {f_name} {l_name}: password-{password}""")
             print("")
         elif short_code == "ex":
             print("")
