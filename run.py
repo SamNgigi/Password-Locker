@@ -9,11 +9,11 @@ Users Details
 """
 
 
-def create_user(fname, lname, phone, email, passwords):
+def create_user(fname, lname, phone, email, password):
     """
     Function to create a new user_list
     """
-    new_user = User(fname, lname, phone, email)
+    new_user = User(fname, lname, phone, email, password)
     return new_user
 
 # Save users
@@ -165,7 +165,7 @@ def main():
             if pass_code == "g":
                 password_length = int(
                     input("How long do you want your password"))
-                string = "abcdefghigjkmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ-_=+{}\|"';>./,`!@#$^&*()`'
+                string = "abcdefghigjkmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ-_=+\|"';>./,`!@#$^&*()`'
                 password = "".join(random.sample(string, password_length))
                 print(f"Your new password is {password}")
             else:
@@ -175,7 +175,8 @@ def main():
             save_users(create_user(f_name, l_name, p_number, email, password))
 
             print("")
-            print(f"""New contact - {f_name} {l_name}: password-{password}""")
+            print(
+                f"""New contact - {f_name} {l_name} your account password is - {password}""")
             print("")
         elif short_code == "ex":
             print("")
