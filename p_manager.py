@@ -60,6 +60,14 @@ class Passwords:
         """
         Passwords.password_list.append(self)
 
+    """
+    Below we encounter decorators in python.
+    They basically allow us to make simple modifications to callable objects
+    like functions, methods, or classes
+
+    Here we want to allow some of our functions to apply to the entire class.
+    """
+
     @classmethod
     def display_profiles(cls):
         """
