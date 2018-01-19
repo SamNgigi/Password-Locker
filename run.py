@@ -9,11 +9,11 @@ Users Details
 """
 
 
-def create_user(fname, lname, phone, email, password):
+def create_user(fname, lname, password):
     """
     Function to create a new user_list
     """
-    new_user = User(fname, lname, phone, email, password)
+    new_user = User(fname, lname, password)
     return new_user
 
 # Save users
@@ -66,11 +66,11 @@ def display_users():
 # Copy pasting
 
 
-def copy_email(number):
+def copy_password(number):
     """
     Function that copys to machines clipboard
     """
-    return User.copy_email()
+    return User.copy_password()
 
 
 """
