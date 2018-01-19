@@ -112,7 +112,7 @@ def display_profiles():
     """
     Function that returns all save profiles
     """
-    return Passwords.display_profiles
+    return Passwords.display_profiles()
 
 
 def copy_password(account_name):
