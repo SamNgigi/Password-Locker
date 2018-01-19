@@ -1,6 +1,6 @@
 #!/usr/bin/env python3.6
 import unittest
-from p_manager import Passwords
+from locker import Passwords
 import pyperclip
 
 
@@ -52,7 +52,7 @@ class TestPasswords(unittest.TestCase):
         Test Case to test if the contact object is saved.
 
         So here it seems like we save try save our profile using a function on
-        p_manager that we  have not built.
+        locker that we  have not built.
         This is what causes our test to fail and will only work when we build
         it and then import the working one
         """
