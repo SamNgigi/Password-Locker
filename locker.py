@@ -1,5 +1,6 @@
 #!/usr/bin/env python3.6
 import pyperclip
+import random
 """
 1.Generate password
 2.Save password
@@ -100,6 +101,13 @@ class Passwords:
     def copy_password(cls, account_name):
         password_found = Passwords.find_by_account(account_name)
         pyperclip.copy(password_found.account_password)
+
+    @classmethod
+    def password_gen(cls, password_length):
+        string = "abcdefghigjkmnopqrstuvwxyz1234567890-_=+{}\|"';>./,`!@#$^&*()`'
+        password = "".join(random.sample(string, int(password_length)))
+        account_passsword = password
+        return account_passsword
 
 
 # print("How long do you want your password:")

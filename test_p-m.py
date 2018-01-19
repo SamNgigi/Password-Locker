@@ -121,7 +121,7 @@ class TestPasswords(unittest.TestCase):
         """
         self.new_profile.save_profile()
         random_password = self.new_profile.password_gen("17")
-        self.assertEquals(random_password, self.new_profile.account_password)
+        self.assertNotEqual(random_password, self.new_profile.account_password)
 
 
 if __name__ == "__main__":
