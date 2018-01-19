@@ -140,7 +140,7 @@ def main():
         short_code = input().lower()
         print("_" * 100)
         if short_code == "cn":
-            print("New Contact")
+            print("New Password Locker Account")
             print("_" * 20)
 
             print("Enter first name -")
@@ -198,6 +198,10 @@ def main():
             else:
                 print("Write a password of your own. We'll store it for you")
                 password = input()
+                print("")
+                print(f"Your password for {account_name} is: {password}")
+                print("")
+                print("__" * 20)
 
         elif short_code == "dp":
             if display_profiles():
