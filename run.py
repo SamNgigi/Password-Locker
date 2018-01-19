@@ -164,7 +164,7 @@ def main():
             print("__" * 20)
             if pass_code == "g":
                 password_length = int(
-                    input("How long do you want your password"))
+                    input("How long do you want your password - "))
                 string = "abcdefghigjkmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ-_=+\|"';>./,`!@#$^&*()`'
                 password = "".join(random.sample(string, password_length))
                 print(f"Your new password is {password}")
