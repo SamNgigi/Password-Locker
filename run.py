@@ -134,7 +134,7 @@ def main():
         print("""Use these short codes:
               cn - create new account
               np - create password profile,
-              dp- display password locker profiles,
+              dp - display password locker profiles,
               fp - find a password profile,
               ex - exit contact list.""")
         short_code = input().lower()
@@ -194,7 +194,7 @@ def main():
                     input("How long do you want your password - "))
                 string = "abcdefghigjkmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ-_=+\|"';>./,`!@#$^&*()`'
                 password = "".join(random.sample(string, password_length))
-                print(f"Your new password is {password}")
+                print(f"Your password for {account name} is {password}")
             else:
                 print("Write a password of your own. We'll store it for you")
                 password = input()
