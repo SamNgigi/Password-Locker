@@ -124,8 +124,29 @@ def copy_password(account_name):
 def main():
     print("Hello! Welcome to your password manager. What is your name?")
     user_name = input()
+    print("")
 
     print(f"Hi {user_name}. What would you like to do?")
+    print("")
+
+    while True:
+        print("""Use these short codes:
+              cn - create new account
+              np - create password profile,
+              dp- display password locker profiles,
+              fp - find a password profile,
+              ex - exit contact list.""")
+        short_code = input().lower()
+        print("_" * 20)
+        if short_code == "nc":
+            print("New Contact")
+            print("_" * 100)
+        elif short_code == "ex":
+            print("")
+            print(
+                "*" * 10 + " Thank you for visiting password locker. Come again! Bye :) " + "*" * 10)
+            print("")
+            break
 
 
 if __name__ == '__main__':

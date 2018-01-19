@@ -9,7 +9,7 @@ class User:
     """
     user_list = []
 
-    def __init__(self, first_name, last_name, phone_number, email):
+    def __init__(self, first_name, last_name, phone_number, email, password):
         """
         __init__ method that helps us define for our objects.
 
@@ -27,6 +27,7 @@ class User:
         self.last_name = last_name
         self.phone_number = phone_number
         self.email = email
+        self.password = password
 
     def save_user(self):
         """
