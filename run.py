@@ -228,10 +228,10 @@ def main():
                 search_profile = find_profile(account_name)
                 print("_" * 20)
                 print(f"{search_profile.account_name}")
-                print("_" * 20)
                 print(f"Password - {search_profile.account_password}")
                 print(f"Password Length - {search_profile.password_length}")
                 print("")
+                print("_" * 20)
             else:
                 print("That profile does not exist")
                 print("")
