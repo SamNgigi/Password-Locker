@@ -239,7 +239,7 @@ def main():
         elif short_code == "ex":
             print("")
             print(
-                "*" * 10 + " Thank you for visiting password locker. Come again! Bye :) " + "*" * 10)
+                "*" * 10 + " Thank you for visiting Password Locker. Come again! Bye :) " + "*" * 10)
             print("")
             break
 
