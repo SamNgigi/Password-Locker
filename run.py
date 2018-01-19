@@ -221,7 +221,7 @@ def main():
                 print("")
 
         elif short_code == "fp":
-            print("Enter the account you want to the password for")
+            print("Enter the account you want to find the password for")
 
             account_name = input()
             if profile_exists(account_name):
@@ -229,8 +229,8 @@ def main():
                 print("_" * 20)
                 print(f"{search_profile.account_name}")
                 print(f"Password - {search_profile.account_password}")
-                print(f"Password Length - {search_profile.password_length}")
                 print("")
+                print(f"Password Length - {search_profile.password_length}")
                 print("_" * 20)
             else:
                 print("That profile does not exist")
