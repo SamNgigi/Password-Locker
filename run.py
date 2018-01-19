@@ -178,6 +178,27 @@ def main():
             print(
                 f"""New contact - {f_name} {l_name} your account password is - {password}""")
             print("")
+        elif short_code == "np":
+            print(
+                "What account do you want to save a password for? Eg Gmail, Facebook, Equity")
+            account_name = input()
+            print("""
+                  We can generate a password for you. Use:
+                  g- to generate a password
+                  m- to set your own.
+                  """)
+            pass_code = input().lower()
+            print("__" * 20)
+            if pass_code == "g":
+                password_length = int(
+                    input("How long do you want your password - "))
+                string = "abcdefghigjkmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ-_=+\|"';>./,`!@#$^&*()`'
+                password = "".join(random.sample(string, password_length))
+                print(f"Your new password is {password}")
+            else:
+                print("Write a password of your own. We'll store it for you")
+                password = input()
+
         elif short_code == "ex":
             print("")
             print(
