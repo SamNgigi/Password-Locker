@@ -136,7 +136,7 @@ def main():
               np - create password profile,
               dp - display password locker profiles,
               fp - find a password profile,
-              ex - exit contact list.""")
+              ex - exit profile list.""")
         short_code = input().lower()
         print("_" * 100)
         if short_code == "cn":
@@ -148,12 +148,6 @@ def main():
 
             print("Enter last name -")
             l_name = input()
-
-            print("Phone number -")
-            p_number = input()
-
-            print("Email address -")
-            email = input()
 
             print("""
                   We can generate a password for you. Use:
@@ -172,11 +166,11 @@ def main():
                 print("Write a password of your own. We'll store it for you")
                 password = input()
 
-            save_users(create_user(f_name, l_name, p_number, email, password))
+            save_users(create_user(f_name, l_name, password))
 
             print("")
             print(
-                f"""New contact - {f_name} {l_name} your account password is - {password}""")
+                f"""New profile - {f_name} {l_name} your account password is - {password}""")
             print("")
         elif short_code == "np":
             print(
@@ -190,16 +184,49 @@ def main():
             pass_code = input().lower()
             print("__" * 20)
             if pass_code == "g":
+
                 password_length = int(
                     input("How long do you want your password - "))
+
                 string = "abcdefghigjkmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ-_=+\|"';>./,`!@#$^&*()`'
+
                 password = "".join(random.sample(string, password_length))
+
                 print(f"Your password for {account_name} is: {password}")
                 print("")
                 print("__" * 20)
             else:
                 print("Write a password of your own. We'll store it for you")
                 password = input()
+
+        elif short_code == "dp":
+            if display_profiles():
+                print("Here is a list of all you profiles")
+                print("")
+                for profile in display_profiles():
+                    print(
+                        f"{profile.account_name} {profile.account_password} {profile.password_length}")
+                    print("")
+            else:
+                print("")
+                print("You dont seem to have any profiles save yet")
+                print("")
+
+        elif short_code == "fp":
+            print("Enter the number you want to search for")
+
+            account_name = input()
+            if profile_exists(account_name):
+                search_profile = find_profile(account_name)
+                print("_" * 20)
+                print(f"{search_profile.account_name}")
+                print("_" * 20)
+                print(f"Password - {search_profile.account_password}")
+                print(f"Password - {search_profile.password_length}")
+                print("")
+            else:
+                print("That profile does not exist")
+                print("")
 
         elif short_code == "ex":
             print("")
