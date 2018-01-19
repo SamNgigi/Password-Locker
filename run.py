@@ -23,3 +23,18 @@ def find_profile(account_name):
     Function finds password by account name and returns full details
     """
     return Passwords.find_by_account(account_name)
+
+
+def profile_exists(account_name):
+    """
+    Function that check if a profile exists using an account name to return a
+    boolean if it is found or not.
+    """
+    return Passwords.profile_exists()
+
+
+def display_profiles():
+    """
+    Function that returns all save profiles
+    """
+    return Passwords.display_profiles
