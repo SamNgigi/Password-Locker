@@ -82,7 +82,7 @@ class TestPasswords(unittest.TestCase):
         Method that confirms we are copying the password from a profile
         """
         self.new_profile.save_profile()
-        Passwords.copy_pass("CIA")
+        Passwords.copy_password("CIA")
 
         self.assertEqual(self.new_profile.account_password, pyperclip.paste())
 

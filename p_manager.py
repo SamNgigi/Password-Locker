@@ -1,4 +1,5 @@
 #!/usr/bin/env python3.6
+import pyperclip
 """
 1.Generate password
 2.Save password
@@ -66,8 +67,13 @@ class Passwords:
         """
         return cls.password_list
 
-    # print("How long do you want your password:")
-    # password_length = int(input())
-    # string = "abcdefghigjkmnopqrstuvwxyz1234567890-_=+{}\|"';>./,`!@#$^&*()`'
-    # password = "".join(random.sample(string, password_length))
-    # print(password)
+    @classmethod
+    def copy_password(cls, account_name):
+        password_found = Passwords.find_by_account(account_name)
+        pyperclip.copy(password_found.account_password)
+
+        # print("How long do you want your password:")
+        # password_length = int(input())
+        # string = "abcdefghigjkmnopqrstuvwxyz1234567890-_=+{}\|"';>./,`!@#$^&*()`'
+        # password = "".join(random.sample(string, password_length))
+        # print(password)
