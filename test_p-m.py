@@ -115,10 +115,13 @@ class TestPasswords(unittest.TestCase):
 
         self.assertEqual(self.new_profile.account_password, pyperclip.paste())
 
-        # def test_passGenerated(self):
-        #     """
-        #     We want to test if our password generator will work. Hp
-        #     """
+    def test_password_gen(self):
+        """
+        We want to test if our password generator will work.
+        """
+        self.new_profile.save_profile()
+        random_password = self.new_profile.password_gen("17")
+        self.assertEquals(random_password, self.new_profile.account_password)
 
 
 if __name__ == "__main__":
