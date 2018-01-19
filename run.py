@@ -194,7 +194,9 @@ def main():
                     input("How long do you want your password - "))
                 string = "abcdefghigjkmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ-_=+\|"';>./,`!@#$^&*()`'
                 password = "".join(random.sample(string, password_length))
-                print(f"Your password for {account name} is {password}")
+                print(f"Your password for {account_name} is: {password}")
+                print("")
+                print("__" * 20)
             else:
                 print("Write a password of your own. We'll store it for you")
                 password = input()
