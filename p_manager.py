@@ -69,6 +69,17 @@ class Passwords:
     """
 
     @classmethod
+    def profile_exists(cls, account_name):
+        """
+        Method checks if a profile exists from password_list. It takes in the
+        name and returns a boolean if it finds a matching account.
+        """
+        for profile in cls.password_list:
+            if profile.account_name == account_name:
+                return True
+        return False
+
+    @classmethod
     def display_profiles(cls):
         """
         Method that will return profile list.
