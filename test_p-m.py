@@ -88,6 +88,18 @@ class TestPasswords(unittest.TestCase):
         self.assertEqual(found_profile.account_password,
                          test_profile.account_password)
 
+    def test_profile_exists(self):
+        """
+        Test to check if we can return a boolean if we cannot find a profile
+        """
+
+        self.new_profile.save_profile()
+        test_profile = Passwords("Twitter", "newtwitteruser", "14")
+        test_profile.save_profile()
+
+        test_exists = Passwords.profile_exists("Twitter")
+        self.assertTrue(test_exists)
+
     def test_display_profiles(self):
         """
         Method that displays the list of all the profiles saved
