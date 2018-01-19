@@ -123,3 +123,10 @@ def copy_password(account_name):
 
 def main():
     print("Hello! Welcome to your password manager. What is your name?")
+    user_name = input()
+
+    print(f"Hi {user_name}. What would you like to do?")
+
+
+if __name__ == '__main__':
+    main()
