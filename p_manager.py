@@ -59,9 +59,15 @@ class Passwords:
         """
         Passwords.password_list.append(self)
 
+    @classmethod
+    def display_profiles(cls):
+        """
+        Method that will return profile list.
+        """
+        return cls.password_list
 
-# print("How long do you want your password:")
-# password_length = int(input())
-# string = "abcdefghigjkmnopqrstuvwxyz1234567890-_=+{}\|"';>./,`!@#$^&*()`'
-# password = "".join(random.sample(string, password_length))
-# print(password)
+        # print("How long do you want your password:")
+        # password_length = int(input())
+        # string = "abcdefghigjkmnopqrstuvwxyz1234567890-_=+{}\|"';>./,`!@#$^&*()`'
+        # password = "".join(random.sample(string, password_length))
+        # print(password)

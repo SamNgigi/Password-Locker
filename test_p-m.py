@@ -71,11 +71,11 @@ class TestPasswords(unittest.TestCase):
         self.new_profile.save_profile()
         self.assertEqual(len(Passwords.password_list), 2)
 
-    def test_display_profile(self):
+    def test_display_profiles(self):
         """
         Method that displays the list of all the profiles saved
         """
-        self.assertEqual(Passwords.display_profile(), Passwords.password_list)
+        self.assertEqual(Passwords.display_profiles(), Passwords.password_list)
 
         # def test_passGenerated(self):
         #     """
