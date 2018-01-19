@@ -9,3 +9,10 @@ def create_profile(account_name, account_password, password_length):
     """
     new_profile = Passwords(account_name, account_password, password_length)
     return new_profile
+
+
+def save_profile(profile):
+    """
+    Function to save profile
+    """
+    profile.save_profile()
