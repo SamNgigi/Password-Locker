@@ -40,16 +40,16 @@ class User:
         User.user_list.remove(self)
 
     @classmethod
-    def find_by_number(cls, number):
+    def find_by_first_name(cls, first_name):
 
         for user in cls.user_list:
-            if user.phone_number == number:
+            if user.first_name == first_name:
                 return user
 
     @classmethod
-    def user_exist(cls, number):
+    def user_exist(cls, first_name):
         for user in cls.user_list:
-            if user.phone_number == number:
+            if user.first_name == first_name:
                 return True
         return False
 
@@ -58,6 +58,6 @@ class User:
         return cls.user_list
 
     # @classmethod
-    # def copy_password(cls, number):
-    #     user_found = User.find_by_number(number)
+    # def copy_password(cls, first_name):
+    #     user_found = User.find_by_first_name(first_name)
     #     pyperclip.copy(user_found.password)
