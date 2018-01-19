@@ -72,8 +72,8 @@ class Passwords:
         password_found = Passwords.find_by_account(account_name)
         pyperclip.copy(password_found.account_password)
 
-        # print("How long do you want your password:")
-        # password_length = int(input())
-        # string = "abcdefghigjkmnopqrstuvwxyz1234567890-_=+{}\|"';>./,`!@#$^&*()`'
-        # password = "".join(random.sample(string, password_length))
-        # print(password)
+# print("How long do you want your password:")
+# password_length = int(input())
+# string = "abcdefghigjkmnopqrstuvwxyz1234567890-_=+{}\|"';>./,`!@#$^&*()`'
+# password = "".join(random.sample(string, password_length))
+# print(password)

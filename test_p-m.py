@@ -71,6 +71,23 @@ class TestPasswords(unittest.TestCase):
         self.new_profile.save_profile()
         self.assertEqual(len(Passwords.password_list), 2)
 
+    def test_find_by_account(self):
+        """
+        Test to check if we can find our passwords by account and display.
+        """
+        test_profile = Passwords("Twitter", "newtwitteruser", "14")
+        test_profile.save_profile()
+        """
+        Below we equate a new variable:
+        found_profile to the profile we
+        want tofind using the function we want to create.
+        We pass in the test account.
+        """
+        found_profile = Passwords.find_by_account("Twitter")
+        self.new_profile.save_profile()
+        self.assertEqual(found_profile.account_password,
+                         test_profile.account_password)
+
     def test_display_profiles(self):
         """
         Method that displays the list of all the profiles saved
