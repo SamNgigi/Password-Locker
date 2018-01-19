@@ -77,6 +77,15 @@ class TestPasswords(unittest.TestCase):
         """
         self.assertEqual(Passwords.display_profiles(), Passwords.password_list)
 
+    def test_copy_password(self):
+        """
+        Method that confirms we are copying the password from a profile
+        """
+        self.new_profile.save_profile()
+        Passwords.copy_pass("CIA")
+
+        self.assertEqual(self.new_profile.account_password, pyperclip.paste())
+
         # def test_passGenerated(self):
         #     """
         #     We want to test if our password generator will work. Hp

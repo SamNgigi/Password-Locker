@@ -66,8 +66,8 @@ class Passwords:
         """
         return cls.password_list
 
-        # print("How long do you want your password:")
-        # password_length = int(input())
-        # string = "abcdefghigjkmnopqrstuvwxyz1234567890-_=+{}\|"';>./,`!@#$^&*()`'
-        # password = "".join(random.sample(string, password_length))
-        # print(password)
+    # print("How long do you want your password:")
+    # password_length = int(input())
+    # string = "abcdefghigjkmnopqrstuvwxyz1234567890-_=+{}\|"';>./,`!@#$^&*()`'
+    # password = "".join(random.sample(string, password_length))
+    # print(password)
