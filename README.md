@@ -5,12 +5,13 @@ Password Locker
 =======================
 
 
-**This simple Python application that helps you store your passwords. It give you the option to generate a random password or write on down yourself**
+**This simple Python application that helps you store your passwords. It gives you the option to generate a random password or write on down yourself**
 
 
 ##Specifications
 -----------------
-- You can create a password profile. This basically means noting down the account you want a password for.
+- You can create a password profile. This basically means noting down the account you want a password for. Use:
+  * np - to create a password profile. The application will automatically save your profile
 
 
 - You have the option of generating a password using our random password generator or writing down one of your won.
@@ -18,13 +19,13 @@ Password Locker
   * m - to write down one of your own. We will save the password for you.
 
 
-- You can search a password by account name. E.g if your want to find your save profile for Facebook.
-  * Enter "fp"
+- You can search a password by account name. E.g if your want to find your save profile for Facebook. Use
+  * fp- for find profile
   * Input the name "Facebook" for Example
   * Program will display your account name plus the password
 
-- You can also display all the profiles saved.
-  * Enter "dp" - for displaying all your save profiles.
+- You can also display all the profiles saved. Enter
+  * dp - for displaying all your save profiles.
   * All you saved password profiles with the passwords will be displayed.
 
   - Use "ex" to exit the program.
