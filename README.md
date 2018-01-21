@@ -8,7 +8,7 @@ Password Locker
 **This simple Python application that helps you store your passwords. It gives you the option to generate a random password or write on down yourself**
 
 
-##Specifications
+## Specifications
 -----------------
 - You can create a password profile. This basically means noting down the account you want a password for. Use:
   * np - to create a password profile. The application will automatically save your profile
