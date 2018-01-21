@@ -1,4 +1,4 @@
-![PingPong](images/ping.png)
+![Passwordlocker]()
 
 
 Password Locker
@@ -10,33 +10,32 @@ Password Locker
 
 ##Specifications
 -----------------
-- You can create a password profile. This basically means noting down the account you 
+- You can create a password profile. This basically means noting down the account you want a password for.
 
 
-- When the application finds a number that is a multiple of 3 it replaces the number with an output "Ping"
-  * Example Input: 5
-  * Example Output: 1 2 Ping 4 5
+- You have the option of generating a password using our random password generator or writing down one of your won.
+  * g - for using our random password generator.
+  * m - to write down one of your own. We will save the password for you.
 
 
-- When the application finds a number that is a multiple of 5 it replaces the number with an output "Pong"
-  * Example Input: 5
-  * Example Output: 1 2 Ping 4 Pong
+- You can search a password by account name. E.g if your want to find your save profile for Facebook.
+  * Enter "fp"
+  * Input the name "Facebook" for Example
+  * Program will display your account name plus the password
 
-- When the application finds a number that is a multiple of 15 it replaces the number with an output "PingPong"
-  * Example Input: 15
-  * Example Output: 1 2 Ping 4 Pong Ping 7 8 Ping Pong 11 Ping 13 14 PingPong
+- You can also display all the profiles saved.
+  * Enter "dp" - for displaying all your save profiles.
+  * All you saved password profiles with the passwords will be displayed.
+
+  - Use "ex" to exit the program.
+
 
 
 ### What we used
 This site was build using  
-1. `HTML`
-2. `CSS`
-3. `JavaScript`
-4. `jQuery`
-5. `Animate.css`
-6. `Bootstrap`.
+1. `Python 3.6`.
 
-Click [here](https://samngigi.github.io/Ping-Pong/) to see the site.
+
 
 ------------
 
