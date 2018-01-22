@@ -122,6 +122,10 @@ def copy_password(account_name):
     return Passwords.copy_password()
 
 
+def password_gen(password_length):
+    return Passwords.password_gen(password_length)
+
+
 def main():
     print("Hello! Welcome to your password manager. What is your name?")
     user_name = input()
@@ -158,8 +162,7 @@ def main():
             if pass_code == "g":
                 password_length = int(
                     input("How long do you want your password - "))
-                string = "abcdefghigjkmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ-_=+\|"';>./,`!@#$^&*()`'
-                password = "".join(random.sample(string, password_length))
+                password = password_gen(password_length)
                 print(f"Your new password is {password}")
             else:
                 print("Write a password of your own. We'll store it for you")
@@ -174,7 +177,6 @@ def main():
             print("You can now create your password profiles")
         while True:
             print("""Use these short codes:
-                  cn - create new account
                   np - create password profile,
                   dp - display password locker profiles,
                   fp - find a password profile,
@@ -197,9 +199,7 @@ def main():
                     password_length = int(
                         input("How long do you want your password - "))
 
-                    string = "abcdefghigjkmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ-_=+\|"';>./,`!@#$^&*()`'
-
-                    password = "".join(random.sample(string, password_length))
+                    password = password_gen(password_length)
                     print("")
                     print(f"Your password for {account_name} is: {password}")
                     print("")
