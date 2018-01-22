@@ -42,8 +42,10 @@ From the terminal navigate to the cloned project folder.
 open terminal and go to the project folder, run $ ./run.py
 
 ## Known Bugs
-This will be updated as the app goes on. If you find any bug please notify through this link
-
+This will be updated as the app goes on. If you find any bug please notify through this email.
+sam.t.ngigi@gmail.com.
+- Login not fully functional.
+- Copy paste not completely implemented
 
 
 ### What we used
