@@ -30,6 +30,20 @@ Password Locker
 
   - Use "ex" to exit the program.
 
+## Setup/Installation Requirements
+Clone the repository
+
+Ensure you have python3.6 installed in your computer.
+
+install pyperclip $ python3.6 -m pip install pyperclip
+
+From the terminal navigate to the cloned project folder.
+
+open terminal and go to the project folder, run $ ./run.py
+
+## Known Bugs
+This will be updated as the app goes on. If you find any bug please notify through this link
+
 
 
 ### What we used
